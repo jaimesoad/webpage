@@ -28,10 +28,14 @@ nav div a{
     text-decoration: none;
     color: white;
     font-size: 1.5rem;
+    border-radius: 5px;
+    transition: 0.2s ease-out;
+    pointer-events: auto;
 }
 
 nav div a:hover {
-    background-color: #366fa5;
+    background-color: #93dbe9;
+    transition: 0.2s ease-in;
 }
 
 footer {
@@ -40,6 +44,7 @@ footer {
 }
 
 footer h1 {
+    color: black;
 }
 
 footer div a p {
@@ -48,6 +53,37 @@ footer div a p {
 }
 
 /* ##### CLASSES ##### */
+
+.cloud {
+    position: absolute;
+    height: 50px;
+}
+
+.star {
+    display: none;
+    position: absolute;
+    width: 25px;
+}
+
+.st-1 {
+    left: 11.1%;
+    top: 200px;
+}
+
+.st-2 {
+    left: 22.2%;
+    bottom: 100px;
+}
+
+.st-3 {
+    right: 22.2%;
+    top: 80px;
+}
+
+.st-4 {
+    bottom: 75px;
+    right: 8%;
+}
 
 .footer-links {
     color: black;
@@ -103,12 +139,34 @@ footer div a p {
 }
 
 #mid-1 {
-    height: 100px;
+    height: 400px;
+}
+
+#mid-1 hr {
+    border: 10px dotted;
+    border-bottom: 0;
+    width: 10%;
+
 }
 
 #mid-2 {
-    height: 500px;
+    height: fit-content;
     background-color: #8ac4d0;
+    padding: 8% 17.5%;
+    font-size: 1.5rem;
+    color: black;
+    font-family: 'Raleway';
+}
+
+#mid-2 p {
+    line-height: 1.8;
+}
+
+#img-1 {
+    height: 250px;
+    border-radius: 15px;
+    float: right;
+    margin-left: 5px;
 }
 
 #contacts {
@@ -135,8 +193,20 @@ footer div a p {
         background-color: #28527a;
     }
 
+    nav div a:hover {
+        background-color: #366fa5;
+    }
+
     #ham {
         color: white;
+    }
+
+    .cloud {
+        display: none;
+    }
+
+    .star {
+        display: block;
     }
 
     .footer-links {
@@ -158,6 +228,10 @@ footer div a p {
         margin: 0 auto;
         width: 40%;
     }
+
+    footer h1 {
+        color: white;
+    }
 }
 
 @media (max-width: 720px){
@@ -169,14 +243,13 @@ footer div a p {
     }
 
     #menu {
-        display: block;
+        display: none;
         position: fixed;
         top: 0;
         bottom: 0;
         width: 80%;
         transition: 0.3s ease-out;
         left: 0;
-        transform: translateX(-100%);
         background-color: #3838386c;
         backdrop-filter: blur(5px);
         text-align: left;
@@ -192,6 +265,7 @@ footer div a p {
         display: block;
         height: fit-content;
         margin: 0;
+        border-radius: 0;
     }
 
     nav div a:hover {
@@ -208,5 +282,20 @@ footer div a p {
     
     .footer-links {
         margin: 0.5rem auto;
+    }
+
+    #mid-2 p {
+        text-align: center;
+        font-size: 1.25rem;
+    }
+
+    #mid-2 div {
+        display: flex;
+        justify-content: center;
+    }
+
+    #img-1 {
+        float: none;
+        margin: 0;
     }
 }

@@ -1,13 +1,12 @@
 let ham = document.getElementById("ham");
 let options = document.getElementById("menu");
-opened = false;
 
 const openMenu = () => {
-    options.style.left = "80%";
+    options.style.display = "block";
 
 };
 
 const closeMenu = () => {
-    options.style.left = "-100%";
+    options.style.display = "none";
 
 };
