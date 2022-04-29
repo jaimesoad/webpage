@@ -58,6 +58,13 @@ button:hover {
 
 /* ##### CLASSES ##### */
 
+.spinner {
+    animation: spin infinite linear;
+    animation-duration: 16s;
+    pointer-events: none;
+    width: 40%;
+}
+
 .cloud {
     position: absolute;
     height: 50px;
@@ -71,21 +78,21 @@ button:hover {
 
 .st-1 {
     left: 11.1%;
-    top: 200px;
+    top: 32%;
 }
 
 .st-2 {
     left: 22.2%;
-    bottom: 100px;
+    bottom: 13%;
 }
 
 .st-3 {
     right: 22.2%;
-    top: 80px;
+    top: 14%;
 }
 
 .st-4 {
-    bottom: 75px;
+    bottom: 11%;
     right: 8%;
 }
 
@@ -118,6 +125,7 @@ button:hover {
     height: 600px;
     text-align: center;
     overflow: hidden;
+    position: relative;
 }
 
 #ham {
@@ -130,13 +138,6 @@ button:hover {
     margin: 0;
     padding: 0;
 
-}
-
-#sun {
-    animation: spin infinite linear;
-    animation-duration: 16s;
-    pointer-events: none;
-    width: 40%;
 }
 
 #moon {
@@ -257,11 +258,7 @@ button:hover {
     }
 
     #moon {
-        display: block;
-        animation: spin infinite linear;
-        animation-duration: 16s;
-        margin: 0 auto;
-        width: 40%;
+        display: initial;
     }
 
     footer h1 {
@@ -274,6 +271,10 @@ button:hover {
 }
 
 @media (max-width: 720px){
+    .spinner {
+        width: 65%;
+    }
+
     #ham {
         display: block;
         position: fixed;
@@ -282,17 +283,20 @@ button:hover {
     }
 
     #menu {
-        display: none;
+        /* display: none; */
         position: fixed;
         top: 0;
         bottom: 0;
         width: 80%;
         transition: 0.3s ease-out;
         left: 0;
-        background-color: #3838386c;
-        backdrop-filter: blur(5px);
+        background: #383838;
+        /* background-color: #3838386c;
+        backdrop-filter: blur(5px); */
+        transform: translateX(-100%);
         text-align: left;
         z-index: 10;
+        display: block;
     }
 
     #close {
@@ -323,18 +327,44 @@ button:hover {
         margin: 0.5rem auto;
     }
 
+    #mid-2 {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
     #mid-2 p {
-        text-align: center;
+        text-align: justify;
         font-size: 1.25rem;
     }
 
     #mid-2 div {
-        display: flex;
+        display: block;
         justify-content: center;
     }
 
-    #img-1 {
+    #img-1, #img-2 {
         float: none;
         margin: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .paragraph {
+        display: block;
+        text-align: justify;
+    }
+
+    @media (prefers-color-scheme: light){
+        #menu {
+            background: white;
+        }
+
+        #menu a {
+            color: #383838;
+        }
+
+        #close {
+            color: #383838;
+        }
     }
 }
